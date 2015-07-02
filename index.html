@@ -1,0 +1,22 @@
+<html>
+<head>
+    <title>FAPB Index Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" type="text/css" rel="stylesheet" />
+    <!-- ADD HERE YOUR CSS FILES OR CDN STYLES-- >
+</head>
+<body ng-cloak>
+
+    <!-- ADD HERE YOUR OWN HTML OR ANY ADDITIONAL SCRIPTS -->
+
+    <script src="libs/jquery.js"></script>
+    <script src="libs/angular/angular.js"></script>
+    <script src="libs/require.js"></script>
+    <script src="libs/fapbRConfig.js"></script>
+
+    <script>
+    require(["config"], function() { angular.bootstrap(document.getElementsByTagName("body")[0], ["fapbApp"]); });
+    </script>
+
+</body>
+</html>
