@@ -14,7 +14,8 @@ function getParsedName(name) {
 
 var templateContent = {};
 templateContent["/controllers/controllers.js"] = 'define([], function() {\n\tvar constructor = {};\n\tconstructor.init = function(module) {\n\t\tmodule.controller("' + capitalized + 'IndexCtrl", ["$state", "$stateParams", "$scope", function($state, $stateParams, $scope) {\n\t\t}]);\n\t};\n\treturn constructor;\n});';
-templateContent["/services/services.js"] = 'define([], function() {\n\tvar constructor = {};\n\tconstructor.init = function(module) {\n\t\tmodule.service("' + capitalized + 'TemplateService", ["$http", "$resource", function($http, $resource) {\n\t\t\tvar service = {};\n\t\t\treturn service;\n\t\t}]);\n\t};\n\treturn constructor;\n});';
+templateContent["/services/services.js"] = 'define([], function() {\n\tvar constructor = {};\n\tconstructor.init = function(module) {\n\t\tmodule.service("' + capitalized + 'TemplateService", ["$http", "$resource", function($http) {\n\t\t\tvar service = {};\n\t\t\treturn service;\n\t\t}]);\n\t};\n\treturn constructor;\n});';
+templateContent["/services/rest.js"] = 'define([], function() {\n\tvar constructor = {};\n\tconstructor.init = function(module) {\n\t\tmodule.service("' + capitalized + 'REST", ["$resource", function($resource) {\n\t\t\tvar API_REST = REST_URL.concat(YOUR_REST_URL_HERE);\n\t\t\treturn $resource(API_REST);\n\t\t}]);\n\t};\n\treturn constructor;\n});';
 templateContent["/states/customStates.js"] = '/* use futureStateProvider.futureState(...) to create customFuture states */';
 templateContent["/views/index.html"] = '<div ui-view>Module ' + args.name + ' was created successfully</div>';
 
