@@ -15,7 +15,7 @@ define([], function() {
 	function registerModule(name, options) {
 		options = options || {};
 		options.name = options.name || name;
-		options.files = options.files || [MODULES_DIR + "/" + name + "/config.js"];
+		options.files = options.files || [MODULES_URL + "/" + name + "/config.js"];
 		modules.push(options);
 	};
 	function getStateName(name) {
@@ -33,7 +33,7 @@ define([], function() {
 				});
 			} else {
 				//TODO: poner setModuleConfig en el success del getScript
-				var customStatesDir = MODULES_DIR + "/" + module.name + "/states/customStates.js";
+				var customStatesDir = MODULES_URL + "/" + module.name + "/states/customStates.js";
 				$.getScript(customStatesDir)
 					.success(function() { console.info("customStates for module: " + module.name + " loaded") })
 					.error(function () { console.warn("Error loading customStates for module: " + module.name) })
