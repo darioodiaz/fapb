@@ -10,7 +10,7 @@ define(["factorizator"], function(factorizator) {
 			- rerun: si deberia lanzarse el rerun del modulo o o no
 	*/
 
-    //factorizator.registerModule("YOUR_MODULE_HERE");
+    factorizator.registerModule("Clientes");
 
 	constructor.init = function($lazyLoad) { factorizator.ready($lazyLoad); };
 	return constructor;
