@@ -1,8 +1,7 @@
 define([], function() {
 	var constructor = {};
 	constructor.init = function($stateProvider) {
-		$stateProvider.state({
-			state: "index",
+		$stateProvider.state("index", {
 			url: "/"
 		});
 	};
