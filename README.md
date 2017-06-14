@@ -1,4 +1,6 @@
-# FAPB (Fast Angular Project Bootstrap)
+# [Deprecated] FAPB (Fast Angular Project Bootstrap)
+NOTE: In favour to react and that ecosystem, this architecture is deprectated becuase has to old technologies, but it can be used to build small applications
+
 FAPB is a CoC angular front-end architecture that allow quick angular projects in a less a minute.
 
 # Structure
